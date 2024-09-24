@@ -1,7 +1,12 @@
 echo "# mitRepo1" >> README.md
 git init
-git add README.md
-git commit -m "first commit"
+git add README.md Or alternately, we can use dot (.) to add all the files
+
+-------------
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+-------------
+git commit -m "first commit" (authentication could be aske
 git branch -M main
 git remote add origin https://github.com/misshhtuGitHub/mitRepo1.git
 git push -u origin main
