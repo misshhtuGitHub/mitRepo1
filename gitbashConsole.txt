@@ -1,0 +1,221 @@
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo
+$ git init
+Initialized empty Git repository in C:/Users/user/Downloads/FolderforRepo/.git/
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git add .
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@EC2AMAZ-URJLGBK.(none)')
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git config --global misshhtu@gmail.com
+error: invalid key: misshhtu@gmail.com
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git config --global user.email misshhtu@gmail.com
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git config --global user.name misshhtuGitHub
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git commit -m "first commit"
+[master (root-commit) 1b3a8c5] first commit
+ 2 files changed, 15 insertions(+)
+ create mode 100644 New Text Document.txt
+ create mode 100644 commands.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (master)
+$ git branch -M main
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git remote add origin https://github.com/misshhtuGitHub/mitRepo1
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git remote add origin https://github.com/misshhtuGitHub/mitRepo1.git
+error: remote origin already exists.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 431 bytes | 431.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/misshhtuGitHub/mitRepo1
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git branch newBranch
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git checkout newBranch
+Switched to branch 'newBranch'
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ ls
+'New Text Document.txt'   commands.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git add .
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ ls
+ File-3.txt  'New Text Document.txt'   commands.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git commit -m "commit in new branch"
+[newBranch 4fc992a] commit in new branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 File-3.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git add .
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ ls
+ File-3.txt  'New Text Document.txt'   commands.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git commit -m "commit-2 in new branch"
+[newBranch c1b6f8b] commit-2 in new branch
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git remote add origin https://github.com/misshhtuGitHub/mitRepo1.git
+error: remote origin already exists.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ switch main
+bash: switch: command not found
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ ls
+'New Text Document.txt'   commands.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ switch newBranch
+bash: switch: command not found
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git branch
+* main
+  newBranch
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git switch newBranch
+Switched to branch 'newBranch'
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git push origin newBranch
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 717 bytes | 717.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'newBranch' on GitHub by visiting:
+remote:      https://github.com/misshhtuGitHub/mitRepo1/pull/new/newBranch
+remote:
+To https://github.com/misshhtuGitHub/mitRepo1
+ * [new branch]      newBranch -> newBranch
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git switch main
+error: Your local changes to the following files would be overwritten by checkout:
+        commands.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git commit "new changes"
+error: pathspec 'new changes' did not match any file(s) known to git
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git add .
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git commit -m "leftover changes"
+[newBranch 4eeb167] leftover changes
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git push newBranch
+fatal: 'newBranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git push origin newBranch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 415 bytes | 415.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/misshhtuGitHub/mitRepo1
+   c1b6f8b..4eeb167  newBranch -> newBranch
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (newBranch)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git merge main newBranch
+Updating 1b3a8c5..4eeb167
+Fast-forward
+ File-3.txt   |  0
+ commands.txt | 22 +++++++++++++++++++---
+ 2 files changed, 19 insertions(+), 3 deletions(-)
+ create mode 100644 File-3.txt
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/misshhtuGitHub/mitRepo1
+   1b3a8c5..4eeb167  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@EC2AMAZ-URJLGBK MINGW64 ~/Downloads/FolderforRepo (main)
+$

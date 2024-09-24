@@ -22,8 +22,9 @@ git push -u origin main
 git branch newBranch
 git branch -a //to list the branches
 git switch newBranch
-echo new file  >>devops.txt
+echo new file  >switchgit >devops.txt
 ls //to list the files in new branch
 git push origin newBranch
 Now checout main
-then merge main
+git merge main newBranch
+git push -u origin main
